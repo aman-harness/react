@@ -1,0 +1,19 @@
+name: Sample Pipeline_1676472644159
+stages:
+  - name: build
+    spec:
+      steps:
+        - name: npm_install
+          spec:
+            run: npm install
+          type: script
+        - name: npm_test
+          spec:
+            run: npm run test
+          type: script
+        - name: npm_test
+          spec:
+            run: npm run lint
+          type: script
+    type: ci
+version: 1
